@@ -1,0 +1,33 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Telephone Directory</title>
+</head>
+<body>
+    <div>
+        <h3>Telephone Directory</h3>
+        <table>
+            <tr>
+                <td><p>Telephone number</p></td>
+                <td><p>Name</p></td>
+                <td><p>Address</p></td>
+                <td></td>
+            </tr>
+            @foreach (var b in ViewBag.Telephones)
+            {
+                <tr>
+                    <td><p>@b.PhoneNumber</p></td>
+                    <td><p>@b.Name</p></td>
+                    <td><p>@b.Address</p></td>
+                </tr>
+            }
+        </table>
+    </div>
+</body>
+</html>
